@@ -20,6 +20,9 @@
             </div>
           </div>
         </div>
+        <footer class="card-footer">
+            <a :href="link" class="card-footer-item">Details</a>
+        </footer>
       </div>
     </div>
   </div>
@@ -37,6 +40,10 @@ export default{
       required:true
     },
     image:{
+      type: String,
+      required:true
+    },
+    link:{
       type: String,
       required:true
     }
