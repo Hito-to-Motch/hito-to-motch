@@ -4,10 +4,10 @@
       <div class="card-content">
         <div class="columns">
           <div class="column is-three-fifths">
-            <p class="card-title is-4">
+            <p class="title is-4">
               {{ title }}
             </p>
-            <p class="card-description is-6">
+            <p class="content">
               {{ description }}
             </p>
           </div>
