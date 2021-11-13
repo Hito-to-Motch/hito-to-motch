@@ -60,13 +60,28 @@ export default {
         {
           title: 'Home',
           icon: 'home',
-          to: { name: 'index' }
+          to: '/'
         },
         {
-          title: 'Inspire',
+          title: '場所一覧',
           icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
+          to: '/place/view'
+        },
+        {
+          title: 'プロジェクト作成',
+          icon: 'lightbulb',
+          to: '/project/create'
+        },
+        {
+          title: 'サインイン',
+          icon: 'lightbulb',
+          to: '/signin'
+        },
+        {
+          title: 'アカウント作成',
+          icon: 'lightbulb',
+          to: '/signup'
+        },
       ]
     }
   }
