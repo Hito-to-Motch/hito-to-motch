@@ -60,7 +60,7 @@ export default {
         {
           title: 'Home',
           icon: 'home',
-          to: 'index'
+          to: '/'
         },
         {
           title: '場所一覧',
@@ -75,12 +75,12 @@ export default {
         {
           title: 'サインイン',
           icon: 'lightbulb',
-          to: 'signin'
+          to: '/signin'
         },
         {
           title: 'アカウント作成',
           icon: 'lightbulb',
-          to: 'signup'
+          to: '/signup'
         },
       ]
     }
