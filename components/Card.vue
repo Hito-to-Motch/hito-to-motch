@@ -1,6 +1,6 @@
 <template>
   <div class="column">
-    <div class="card0">
+    <div class="card">
       <div class="card-content">
         <div class="columns">
           <div class="column is-three-fifths">
