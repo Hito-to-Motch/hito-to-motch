@@ -9,11 +9,11 @@
         </section>
         <section>
             <div class="my_chat">
-                <input v-model="my_message" type="text" placeholder="あなたのチャット">
+                <input v-model="my_message" type="text" placeholder="企画者のチャット">
                 <button @click="mySend">送信する</button>
             </div>
             <div class="other_chat">
-                <input v-model="other_message" type="text" placeholder="相手のチャット">
+                <input v-model="other_message" type="text" placeholder="支援者のチャット">
                 <button @click="otherSend">送信する</button>
             </div>
         </section>
