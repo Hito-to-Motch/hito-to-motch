@@ -5,23 +5,8 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
-        </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
+      <div class="navbar-end">
+        <LoginDetection></LoginDetection>
       </div>
     </nav>
 
@@ -53,7 +38,11 @@
 </template>
 
 <script>
+import LoginDetection from '~/components/Login-Detection'
 export default {
+  components: {
+    LoginDetection
+  },
   data () {
     return {
       items: [
