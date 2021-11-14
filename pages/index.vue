@@ -2,41 +2,49 @@
   <section class="section">
     <div v-for="(item, index) in items" :key="index">
       <div class="columns is-moblie">
-        <card :title="item.title" :description="item.description" :image="item.image" :link="item.link"></card>
+        <n-card
+          :title="item.title"
+          :description="item.description"
+          :image="item.image"
+          :link="item.link"
+        ></n-card>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import Card from '~/components/Card'
-import jsonfile from '~/assets/data.json'
-import firebase from '~/plugins/firebase.js'
+import Card from "~/components/Card";
+import NCard from "~/components/NCard";
+import firebase from "~/plugins/firebase.js";
 
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   mounted() {
-    let fref = firebase.database().ref()
-    fref.on("value", (snapshot)=> {
-      const data = Object.values(snapshot.val())
-      const redata = data.map(v => {
-        return {
+    let fref = firebase.database().ref();
+    fref.on("value", (snapshot) => {
+      const data = snapshot.val();
+      const redata = []
+      for (let k in snapshot.val()) {
+        let v = data[k]
+        redata.push({
           title: v.title,
           description: v.description,
           image: "http://shiramine.info/about/img_drn-01.jpg",
-          link: "http://shiramine.info/about.html"
-        }
-      })
-      this.items = redata
-    })
+          link: `/project/page?id=${k}`,
+        })
+      }
+      this.items = redata;
+    });
   },
   components: {
-    Card
+    Card,
+    NCard,
   },
-  data(){
-    return{
-      items: []
+  data() {
+    return {
+      items: [],
     };
-  }
-}
+  },
+};
 </script>
