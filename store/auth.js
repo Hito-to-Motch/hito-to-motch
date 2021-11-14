@@ -11,3 +11,12 @@ export const mutations = {
   }
 }
 
+export const actions = {
+  login({ commit }) {
+    commit('setUser', user)
+  },
+  logout({ commit }) {
+    commit('delUser')
+  }
+}
+

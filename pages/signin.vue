@@ -10,6 +10,7 @@
 <script>
 import firebase from '~/plugins/firebase.js'
 
+
 export default {
   data() {
     return {
@@ -21,11 +22,14 @@ export default {
     async signin() {
       try {
         const { user, } = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        this.$store.commit('setUser', user)
-        console.log(user)
+        this.$store.commit('auth/setUser', this.deepCopy(user))
+        console.log(this.$store.state.auth.user);
       } catch(e) {
         alert("失敗:", e.message)
       }
+    },
+    deepCopy(obj) {
+      return JSON.parse(JSON.stringify(obj))
     }
   }
 }

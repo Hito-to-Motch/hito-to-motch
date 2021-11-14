@@ -2,36 +2,47 @@
     <section>
       <font size="6">プロジェクト作成</font><br><br>
         <b-field label="プロジェクトタイトル">
-            <b-input value=""></b-input>
+            <b-input v-model="title"></b-input>
         </b-field>
 
-        <b-field label="プロジェクトの概要"
-            :label-position="labelPosition">
-            <b-input maxlength="200" type="textarea"></b-input>
+        <b-field label="プロジェクトの概要">
+            <b-input maxlength="200" type="textarea" v-model="description"></b-input>
         </b-field>
-        
-        <b-field label="Q１．プロジェクトに支援者は必要か？">
-            <b-checkbox v-model="checkboxCustom"
-                true-value="Yes"
-                false-value="No">
-                {{ checkboxCustom }}
-            </b-checkbox>
-        </b-field><br>
 
-        <b-field label="希望立地">
+        <b-field label="プロジェクトの詳細">
         <quill-editor v-model="editor" />
         </b-field>
         <b-button type="is-primary">次へ</b-button>
+        <!-- <kiji :doc="editor"></kiji> -->
     </section>
 </template>
 
 <script>
+import firebase from '~/plugins/firebase.js'
+import Kiji from '~/components/Kiji';
+
 export default {
+    components: {
+        Kiji
+    },
     data() {
       return {
-        checkboxCustom: 'No',
+        title: '',
+        description: '',
         editor: '',
       }
+    },
+    methods: {
+        pushDatabase() {
+            let fref = firebase.database().ref()
+            // fref.push({ 
+            //     title: title,
+            //     description: description,
+            //     document: editor,
+            //     user: 
+            // })
+
+        }
     }
 }
 </script>
