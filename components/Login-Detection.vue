@@ -1,7 +1,9 @@
 <template>
   <div class="LoginDetection">
-    <div v-if="user != null">
+    <div v-if="$store.state.auth.user">
+      <NuxtLink to="/signin">
       <b-button type="is-primary" @click="Signout">Signout</b-button>
+      </NuxtLink>
     </div>
     <div v-else>
       <NuxtLink to="/signin">
