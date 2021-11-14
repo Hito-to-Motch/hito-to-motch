@@ -1,5 +1,6 @@
 <template>
   <section class="section">
+    <div v-if="!this.$store.state.auth.user">
     <font size="5">Signin</font><br><br>
   <div class="Signin-form">
     Email
@@ -29,6 +30,21 @@
             <b-button type="is-primary" expanded @click="signin">Signin</b-button>
     </div>
   </div>
+    </div>
+    <div v-else>
+      <font size="5">Signinしました．</font>
+      <div class="homebutton">
+      <NuxtLink to="/">
+      <b-button type="is-primary" expanded>Home</b-button>
+      </NuxtLink>
+      </div>
+      <br>
+      <div class="Projectbutton">
+      <NuxtLink to="/project/create">
+      <b-button type="is-primary" expanded>Project作成</b-button>
+      </NuxtLink>
+      </div>
+    </div>
   </section>
 </template>
 

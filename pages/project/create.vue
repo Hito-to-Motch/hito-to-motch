@@ -1,5 +1,12 @@
 <template>
-    <section>
+    <section class="section">
+        <div v-if="!this.$store.state.auth.user">
+            <font size="5">Signinしてください．</font>
+            <NuxtLink to="/signin">
+            <b-button type="is-primary" expanded>Signin</b-button>
+            </NuxtLink>
+        </div>
+        <div v-else>
       <font size="6">プロジェクト作成</font><br><br>
         <b-field label="プロジェクトタイトル">
             <b-input v-model="title"></b-input>
@@ -14,6 +21,7 @@
         </b-field>
         <b-button type="is-primary" @click="pushDatabase()">次へ</b-button>
         <!-- <kiji :doc="editor"></kiji> -->
+        </div>
     </section>
 </template>
 
