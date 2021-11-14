@@ -15,7 +15,7 @@
     "firebase": "^8.10.0",
     "markdown-it-vue": "^1.1.6",
     "new-css": "^1.0.1",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "nuxt-buefy": "^0.4.8",
     "vee-validate": "^3.4.14",
     "vue-quill-editor": "^3.0.6"

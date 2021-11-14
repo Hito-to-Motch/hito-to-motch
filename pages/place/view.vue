@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div v-for="item in items">
+    <div v-for="(item,index) in items" :key="index">
       <div class="columns is-moblie">
         <card :title="item.title" :description="item.description" :image="item.image" :link="item.link"></card>
       </div>
@@ -10,7 +10,7 @@
 
 <script>
 import Card from '~/components/Card'
-import jsonfile from '../assets/view_data.json'
+import jsonfile from '~/assets/view_data.json'
 export default {
   name: 'HomePage',
   
