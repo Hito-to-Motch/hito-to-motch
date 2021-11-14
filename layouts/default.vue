@@ -77,11 +77,6 @@ export default {
           icon: 'lightbulb',
           to: '/signin'
         },
-        {
-          title: 'アカウント作成',
-          icon: 'lightbulb',
-          to: '/signup'
-        },
       ]
     }
   }
