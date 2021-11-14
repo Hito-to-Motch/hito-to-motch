@@ -33,9 +33,17 @@
     </div>
     <div v-else>
       <font size="5">Signinしました．</font>
+      <div class="homebutton">
       <NuxtLink to="/">
       <b-button type="is-primary" expanded>Home</b-button>
       </NuxtLink>
+      </div>
+      <br>
+      <div class="Projectbutton">
+      <NuxtLink to="/project/create">
+      <b-button type="is-primary" expanded>Project作成</b-button>
+      </NuxtLink>
+      </div>
     </div>
   </section>
 </template>
