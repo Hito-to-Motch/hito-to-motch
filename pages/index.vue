@@ -1,11 +1,8 @@
 <template>
   <section class="section">
-    <div id="innerHTMLtext">
+    <div v-for="item in items">
       <div class="columns is-moblie">
-        <card title="picture" description="descrition for picture." image="http://shiramine.info/about/img_893-01.jpg" link="http://shiramine.info/about.html"></card>
-      </div>
-      <div class="columns is-moblie">
-        <card title="picture" description="descrition for picture." image="http://shiramine.info/about/img_drn-01.jpg" link="http://shiramine.info/about.html"></card>
+        <card :title="item.title" :description="item.description" :image="item.image" :link="item.link"></card>
       </div>
     </div>
   </section>
@@ -13,11 +10,17 @@
 
 <script>
 import Card from '~/components/Card'
+import jsonfile from '../assets/data.json'
 export default {
   name: 'HomePage',
   
   components: {
     Card
+  },
+  data(){
+    return{
+      items: jsonfile
+    };
   }
 }
 </script>
