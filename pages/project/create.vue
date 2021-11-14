@@ -12,7 +12,7 @@
         <b-field label="プロジェクトの詳細">
         <quill-editor v-model="editor" />
         </b-field>
-        <b-button type="is-primary">次へ</b-button>
+        <b-button type="is-primary" @click="pushDatabase()">次へ</b-button>
         <!-- <kiji :doc="editor"></kiji> -->
     </section>
 </template>
@@ -33,15 +33,22 @@ export default {
       }
     },
     methods: {
-        pushDatabase() {
-            let fref = firebase.database().ref()
-            // fref.push({ 
-            //     title: title,
-            //     description: description,
-            //     document: editor,
-            //     user: 
-            // })
-
+        async pushDatabase() {
+            if ( !!this.$store.state.auth.user ) {
+                try {
+                    let fref = firebase.database().ref()
+                    console.log(fref);
+                    let res = await fref.push({ 
+                        title: this.title,
+                        description: this.description,
+                        document: this.editor,
+                        user: this.$store.state.auth.user.uid,
+                    })
+                    console.log(res);
+                } catch (e) {
+                    console.error(e);
+                }
+            }
         }
     }
 }
