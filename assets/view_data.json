@@ -1,0 +1,20 @@
+[
+  {
+    "title": "白峰",
+    "description": "石川県の南に位置し白山の登山口として知られた村でありました．また，恐竜の化石が大量に産している桑島化石壁がある事から，化石の村としても有名．建設業，木材・木製品工業に従事する者が多いです。",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Shiramine_old_town01.jpg/1280px-Shiramine_old_town01.jpg",
+    "link": "http://shiramine.info/about.html"
+  },
+  {
+      "title": "鳥越",
+      "description": "石川県のやや南部に位置します．平年の積雪は2.5メートルを超える豪雪地帯です．手取川や大日川が形成した河岸段丘を下刻して手取峡谷を形成し，釜清水町から河原山町までの約8㎞にわたり，高さ20～30ｍの絶壁が続きます．毎年「一向一揆祭り」が行われています．",
+      "image": "https://upload.wikimedia.org/wikipedia/ja/9/94/Torigoe01.jpg",
+      "link": "https://www.hot-ishikawa.jp/spot/5921"
+  },
+  {
+      "title": "尾口・中宮",
+      "description": "尾口・吉野谷エリアは，主に手取川支流の尾添川沿い位置し，白山市と白川村を結ぶ豊かな自然のなかを通り抜ける白山白川郷ホワイトロードと，白峰エリアから白山に至る街道との分岐点がある場所です．",
+      "image": "https://hakusan-br.jp/wp/wp-content/uploads/2016/12/photo_oguchi_r1_c1.jpg",
+      "link": "https://hakusan-br.jp/oguchichugu/"
+  }
+]
