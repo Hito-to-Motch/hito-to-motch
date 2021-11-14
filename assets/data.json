@@ -1,0 +1,20 @@
+[
+    {
+      "title": "idea0",
+      "description": "description for idea0.",
+      "image": "http://shiramine.info/about/img_event-04.jpg",
+      "link": "http://shiramine.info/about.html"
+    },
+    {
+        "title": "idea1",
+        "description": "description for idea1.",
+        "image": "http://shiramine.info/about/img_drn-01.jpg",
+        "link": "http://shiramine.info/about.html"
+    },
+    {
+        "title": "idea2",
+        "description": "description for idea2.",
+        "image": "http://shiramine.info/about/img_event-02.jpg",
+        "link": "http://shiramine.info/about.html"
+    }
+]
